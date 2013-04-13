@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @remark.id %>
+</p>
+
+<p>
+  <b>User name:</b>
+  <%= @remark.user_name %>
+</p>
+
+<p>
+  <b>User email:</b>
+  <%= @remark.user_email %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @remark.text %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @remark.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_remark_path(@remark) %> |
+<%= link_to 'Back', remarks_path %>

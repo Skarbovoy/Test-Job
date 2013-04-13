@@ -1,0 +1,37 @@
+<p id="notice"><%= params[:notice] %></p>
+
+<h1>New remark</h1>
+
+<%= render 'form' %>
+
+<h1>Listing remarks</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>User name</th>
+    <th>User email</th>
+    <th>Text</th>
+    <th>Created at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @remarks.each do |remark| %>
+  <tr>
+    <td><%= remark.id %></td>
+    <td><%= remark.user_name %></td>
+    <td><%= remark.user_email %></td>
+    <td><%= remark.text %></td>
+    <td><%= remark.created_at %></td>
+    <td><%= link_to 'Show', remark %></td>
+    <td><%= link_to 'Edit', edit_remark_path(remark) %></td>
+    <td><%= link_to 'Destroy', remark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Remark', new_remark_path %>
